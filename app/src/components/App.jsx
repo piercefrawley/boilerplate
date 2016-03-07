@@ -1,10 +1,15 @@
 import React from 'react';
-import Routes from './Routes';
+import { Link } from 'react-router';
 
-require('../styles/App.scss');
+require('../styles/app.scss');
 
 export default class App extends React.Component {
   render() {
-    return <Routes />;
+    return (
+      <ul>
+        <li>Hello World From App</li>
+        <li><Link to="/about">About</Link></li>
+      </ul>
+    );
   }
 }

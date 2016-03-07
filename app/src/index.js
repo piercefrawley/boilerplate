@@ -1,6 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/App';
+import { Router, browserHistory } from 'react-router';
+import { render } from 'react-dom';
+import { routes } from './routes';
 
 
 function main() {
@@ -8,7 +9,7 @@ function main() {
 
   document.body.appendChild(app);
 
-  ReactDOM.render(<App />, app);
+  render(<Router routes={routes} history={browserHistory}/>, app);
 }
 
 main();
